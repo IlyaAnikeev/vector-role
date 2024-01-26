@@ -1,0 +1,3 @@
+---
+vector_path: "/home/workdir/vector"
+vector_config: "{{ vector_path }}/config/vector.yaml"
