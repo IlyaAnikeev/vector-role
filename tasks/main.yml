@@ -7,7 +7,7 @@
         path: "{{ vector_path }}"
         state: directory
         mode: 0755
-        
+
     - name: Get vector distrib
       become: true
       ansible.builtin.get_url:
@@ -55,8 +55,8 @@
     - name: Vector.service start
       become: true
       systemd:
-        name: vector
+        name: vector.service
         state: started
         enabled: true
-        daemon_reload: true
+        daemon_reload: yes
       when: ansible_facts.virtualization_type != "docker"

@@ -11,6 +11,7 @@ Role Variables
 | vector_version | product version vector |
 | vector_path | installation directory |
 | vector_config | vector config file |
+| allow_world_readable_tmpfiles | ansible root user |
 
 Example Playbook
 ----------------
