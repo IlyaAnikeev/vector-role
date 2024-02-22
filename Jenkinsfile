@@ -2,19 +2,7 @@ pipeline {
     agent any
     
     stages {
-	stage('Сlearing the directory') {
-            steps {
-                deleteDir()
-	    }
-	}
-	stage('Git clone') {
-	    steps {
-	        dir('vector-role') {
-	        git branch: 'main', url: 'https://github.com/IlyaAnikeev/vector-role.git'
-	        }
-	    }
-	}
-        stage('Installing dependencies') {
+	stage('Installing dependencies') {
             steps {
                 sh 'echo Installing dependencies'
                 sh 'set -e'
